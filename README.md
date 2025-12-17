@@ -1,0 +1,2 @@
+# hinf
+minimalistic init
