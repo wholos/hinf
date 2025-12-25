@@ -1,11 +1,19 @@
 include config.mk
 
-all:
+all: c nim
+
+c:
 	@gcc -o hinf src/hinf.c
-	@nim -o=configure c src/configure.nim
+
+nim:
+	@nim -o=configures c src/configure.nim
 
 installib:
 	@nimble install ncurses
 
 clean:
-	@rm hinf && rm configure
+	@rm hinf
+
+configure: nim
+	@./configures
+	@rm configures
