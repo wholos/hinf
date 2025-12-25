@@ -1,6 +1,6 @@
 include config.mk
 
-all: c nim
+all: c
 
 c:
 	@gcc -o hinf src/hinf.c
